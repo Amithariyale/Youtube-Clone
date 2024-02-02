@@ -5,6 +5,7 @@
     margin: 0;
     box-sizing: border-box;
     font-family: Roboto;
+
 }
 
 body {
@@ -12,6 +13,7 @@ body {
     background-color: #161616;
     width: 100vw;
     height: 100vh;
+    color: white;
 }
 
 #navbar {
@@ -104,10 +106,16 @@ body {
 
 
 #main_section {
-    display: flex;
+    padding: 10px;
+    padding-inline: 80px;
+    padding-bottom: 100px;
+    display: grid;
+    grid-template-columns: 67vw auto;
+    gap: 25px;
     width: 100%;
     height: 100%;
     position: fixed;
+    overflow-y: scroll;
 }
 
 #sidebar_menu {
@@ -121,46 +129,41 @@ body {
 
 }
 
-/* video card styles */
 a {
     text-decoration: none;
     color: white;
 }
 
-#video_container {
-    /* flex: 1; */
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    align-items: center;
-    height: 100%;
-    overflow: auto;
-    padding: 20px;
-}
 
-::-webkit-scrollbar {
-    display: none;
+#video-container {
+    width: 67vw;
+    height: 75vh;
+    border-radius: 10px;
 }
 
 .videoCard {
-    width: 23%;
-    height: calc(100vw * 22 / 100);
+    width: 100%;
+    height: calc(100vw * 6 / 100);
     margin: 10px;
     font-size: 0.9vw;
-    border-radius: 10px;
+    /* border-radius: 10px; */
     display: flex;
+    overflow: hidden;
 }
-
-.videoCard>a {
-    display: inline-block;
+.videoCard div{
+    height: 100%;
+}
+.videoCard a {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: 1fr;
+    align-items: center;
+    gap: 10px;
     width: 100%;
     height: 100%;
 }
 
 .videoCard .img_container {
-    width: 100%;
-    height: 55%;
     display: flex;
     overflow: hidden;
     border-radius: 10px;
@@ -168,26 +171,29 @@ a {
     align-items: center;
 }
 
-.videoCard .thumbnail{
+
+
+.videoCard p {
+    white-space: wrap;
+}
+
+.videoCard .thumbnail {
     width: 100%;
     height: 132%;
 }
+
 .videoCard .video_details {
     display: flex;
     gap: 10px;
     margin-top: 10px;
 }
 
-.videoCard .logo {
-    width: 35px;
-    height: 35px;
-    border-radius: 50%;
-}
-
-.videoCard .channel,
-.views {
+.channelName {
     margin-top: 5px;
-    font-size: 0.8rem;
+    font-size: 0.7rem;
     color: gray;
 }
 
+::-webkit-scrollbar {
+    display: none;
+}
