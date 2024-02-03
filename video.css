@@ -29,6 +29,12 @@ body {
 
 #toggle_btn {
     cursor: pointer;
+    border-radius: 20px;
+    padding: 10px;
+}
+
+#toggle_btn:hover {
+    background-color: #aaaaaa1c;
 }
 
 #navbar div {
@@ -118,17 +124,6 @@ body {
     overflow-y: scroll;
 }
 
-#sidebar_menu {
-    width: 50px;
-}
-
-#sidebar_toggle_menu {
-    width: 220px;
-    height: 100%;
-    /* background-color: aliceblue; */
-
-}
-
 a {
     text-decoration: none;
     color: white;
@@ -137,7 +132,7 @@ a {
 
 #video-container {
     width: 67vw;
-    height: 75vh;
+    height: 38vw;
     border-radius: 10px;
 }
 
@@ -150,12 +145,14 @@ a {
     display: flex;
     overflow: hidden;
 }
-.videoCard div{
+
+.videoCard div {
     height: 100%;
 }
+
 .videoCard a {
     display: grid;
-    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 1fr;
     align-items: center;
     gap: 10px;
@@ -196,4 +193,112 @@ a {
 
 ::-webkit-scrollbar {
     display: none;
+}
+
+#channel-info {
+    margin-top: 5px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+#channel-info>a {
+    display: flex;
+    gap: 20px;
+}
+
+#channel-info img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+#channel-info p {
+    color: gray;
+    font-size: 0.8rem;
+}
+
+#channel-info h3,
+#channel-info h3 {
+    font-weight: lighter;
+}
+
+.sub-btn {
+    background-color: red;
+    border: none;
+    padding: 5px;
+    padding-inline: 10px;
+    color: white;
+}
+
+#comment-section {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #aaaaaa1c;
+}
+
+#comment-section p {
+    padding: 20px;
+
+}
+
+#popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #000000c6;
+    z-index: 100;
+}
+
+#sidebar_toggle_menu {
+    width: 220px;
+    height: 100%;
+    flex-direction: column;
+    padding: 10px;
+    background-color: #161616;
+}
+
+
+#sidebar_toggle_menu>div {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    color: white;
+    border-bottom: 1px solid #aaaaaa6a;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+#sidebar_toggle_menu a {
+    flex: 1;
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.home-btn {
+    background-color: #aaaaaa1c;
+}
+
+#sidebar_toggle_menu a:hover {
+    background-color: #aaaaaa1c;
+    cursor: pointer;
+}
+
+#sidebar_toggle_menu>div:first-child {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    border: none;
+    align-items: center;
+    padding-inline: 10px;
+}
+
+#youtube_icon a:hover {
+    background-color: transparent;
 }

@@ -136,7 +136,7 @@ searchForm.addEventListener("submit", (e) => {
 
 toggleSidebarBtn.addEventListener("click", () => {
   sidebarMenu.style.display =
-    sidebarMenu.style.display === "none" ? "block" : "none";
+    sidebarMenu.style.display === "none" ? "flex" : "none";
   sidebarToggleMenu.style.display =
-    sidebarToggleMenu.style.display === "none" ? "block" : "none";
+    sidebarToggleMenu.style.display === "none" ? "flex" : "none";
 });
