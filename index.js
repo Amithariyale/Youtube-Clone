@@ -1,5 +1,5 @@
 const BASE_URL = "https://www.googleapis.com/youtube/v3";
-const API_KEY = "";
+const API_KEY = "AIzaSyCSiyRI5JtiXK3dzB3fOeI5kj7PTRMp8TM";
 
 const videoContainer = document.getElementById("video_container");
 const searchForm = document.getElementById("search_form");
